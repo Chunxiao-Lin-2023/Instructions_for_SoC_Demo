@@ -65,6 +65,15 @@
       sudo python3 transmit_data.py
       ```
    5. Command Sequence: *(details not provided)*
-
-      1. sdf
-      2. sdf
+      Training
+      1. turn on the training
+      2. Send matrices: W_in and W_x
+      3. Send the golden_out_train.txt file
+      4. Start the ESN and send the data_in_train.txt file in chunks.
+      5. From the minicom, we can see the NMSE being updated.
+      Testing
+      1. clear the input data only *(for index reset)*
+      2. turn off the training
+      3. send the golden_out_test.txt file
+      4. Start the ESN and send the data_in_test.txt file in chunks.
+      5. From the minicom, we can see the testing NMSE.
