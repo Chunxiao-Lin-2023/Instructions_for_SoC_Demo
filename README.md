@@ -64,7 +64,8 @@
       ```bash
       sudo python3 transmit_data.py
       ```
-   5. Command Sequence: *(details not provided)*
+   5. Command Sequence:
+      
       Training
       1. turn on the training
       2. Send matrices: W_in and W_x
