@@ -3,12 +3,16 @@
 1. **Install the Cable Drivers (Linux)**  
    For programming the device.
 
-2. **Minicom for UART Connection**  
+2. **Import the project to Vitis**
+   Import both the platform project and the application project.
+   The main files: TBD
+   
+4. **Minicom for UART Connection**  
    Used for monitoring the demo via UART port:
-   - Run: `sudo dmesg | grep tty` to find the USB port.
+   - Run: `sudo dmesg | grep tty` to find the USB port. Here, the port is ttyUSB0.
    - Then: `sudo minicom -D /dev/ttyUSB0 -b 115200` to open Minicom and connect to the correct UART port.
 
-3. **Build Static Ethernet Connection Between PC and FPGA**
+5. **Build Static Ethernet Connection Between PC and FPGA**
 
    - **Temporary Setup**  
      - Use `ip a` to find the Ethernet interface (e.g., `enp3s0`).
@@ -25,15 +29,16 @@
    - **Permanent Setup**  
      - TBD
 
-4. **During Demo**
+6. **During Demo**
 
    1. Open Minicom.
-   2. Activate the Python virtual environment:
+   2. Program the board through Vitis.
+   3. Activate the Python virtual environment:
       ```bash
       source venv/bin/activate
       ```
-   3. Run the Python script within the venv:
+   4. Run the Python script within the venv:
       ```bash
       sudo python3 transmit_data.py
       ```
-   4. Command Sequence: *(details not provided)*
+   5. Command Sequence: *(details not provided)*
