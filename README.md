@@ -72,6 +72,7 @@
       3. Send the golden_out_train.txt file
       4. Start the ESN and send the data_in_train.txt file in chunks.
       5. From the minicom, we can see the NMSE being updated.
+         
       Testing
       1. clear the input data only *(for index reset)*
       2. turn off the training
