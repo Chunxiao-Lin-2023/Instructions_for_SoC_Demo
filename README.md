@@ -1,1 +1,39 @@
 # Instructions_for_SoC_Demo
+
+1. **Install the Cable Drivers (Linux)**  
+   For programming the device.
+
+2. **Minicom for UART Connection**  
+   Used for monitoring the demo via UART port:
+   - Run: `sudo dmesg | grep tty` to find the USB port.
+   - Then: `sudo minicom -D /dev/ttyUSB0 -b 115200` to open Minicom and connect to the correct UART port.
+
+3. **Build Static Ethernet Connection Between PC and FPGA**
+
+   - **Temporary Setup**  
+     - Use `ip a` to find the Ethernet interface (e.g., `enp3s0`).
+     - Run:
+       ```bash
+       sudo ip addr add 192.168.1.2/24 dev enp3s0
+       sudo ip link set enp3s0 up
+       ```
+     - Check the connection:
+       ```bash
+       ping 192.168.1.10
+       ```
+
+   - **Permanent Setup**  
+     - TBD
+
+4. **During Demo**
+
+   1. Open Minicom.
+   2. Activate the Python virtual environment:
+      ```bash
+      source venv/bin/activate
+      ```
+   3. Run the Python script within the venv:
+      ```bash
+      sudo python3 transmit_data.py
+      ```
+   4. Command Sequence: *(details not provided)*
