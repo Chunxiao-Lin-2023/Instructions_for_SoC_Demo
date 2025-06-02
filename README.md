@@ -26,8 +26,31 @@
        ping 192.168.1.10
        ```
 
-   - **Permanent Setup**  
-     - TBD
+   - **Permanent Setup using Netplan**  
+     - Find the Netplan configuration file at `/etc/netplan/` with a `.yaml` extension.
+     - Edit the Netplan configuration file:
+       ```bash
+       sudo nano /etc/netplan/01-netcfg.yaml
+       ```
+     - Modify the file to set a static IP address
+       ```bash
+       network:
+        version: 2
+        renderer: networkd
+        ethernets:
+          enp3s0:
+            dhcp4: no
+            addresses:
+              - 192.168.1.2/24
+         gateway4: 192.168.1.1
+         nameservers:
+           addresses:
+             - 8.8.8.8
+             - 8.8.4.4
+     - Apply the Netplan configuration
+       ```bash
+       sudo netplan apply
+       ```
 
 6. **During Demo**
 
