@@ -97,9 +97,17 @@
          ```bash
          golden_out_test.txt
          ```
-      5. Start the ESN and send the testing input file in chunks.
+      5. Start the ESN and send the testing input file in chunks. Select one of the following file each time.
          ```bash
          data_in_test_SNR_0.txt
+         ```
+         ```bash
          data_in_test_SNR_4.txt
+         ```
+         ```bash
+         data_in_test_SNR_8.txt
+         ```
+         ```bash
+         data_in_test_SNR_12.txt
          ```
       7. From the minicom, we can see the testing NMSE.
