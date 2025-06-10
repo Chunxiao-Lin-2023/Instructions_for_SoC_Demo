@@ -13,7 +13,7 @@
      ```bash
      sudo dmesg | grep tty
      ```
-     find the USB port. Here, the port is ttyUSB0.
+     to find the USB port. Here, the port is ttyUSB0.
    - Then:
      ```bash
      sudo minicom -D /dev/ttyUSB0 -b 115200
@@ -80,13 +80,25 @@
       Training
       1. turn on the training
       2. Send matrices: W_in and W_x
-      3. Send the golden_out_train.txt file
-      4. Start the ESN and send the data_in_train.txt file in chunks.
+      3. Send the golden output file for training
+         ```bash
+         golden_out_train.txt
+         ```
+      4. Start the ESN and send the training input file in chunks
+         ```bash
+         data_in_train.txt
+         ```
       5. From the minicom, we can see the NMSE being updated.
          
       Testing
       1. clear the input data only *(for index reset)*
       2. turn off the training
-      3. send the golden_out_test.txt file
-      4. Start the ESN and send the data_in_test.txt file in chunks.
-      5. From the minicom, we can see the testing NMSE.
+      3. send the golden output file for testing
+         ```bash
+         golden_out_test.txt
+         ```
+      5. Start the ESN and send the testing input file in chunks.
+         ```bash
+         data_in_test.txt
+         ```
+      7. From the minicom, we can see the testing NMSE.
