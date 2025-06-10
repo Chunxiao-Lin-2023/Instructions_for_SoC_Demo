@@ -9,13 +9,24 @@
    
 4. **Minicom for UART Connection**  
    Used for monitoring the demo via UART port:
-   - Run: `sudo dmesg | grep tty` to find the USB port. Here, the port is ttyUSB0.
-   - Then: `sudo minicom -D /dev/ttyUSB0 -b 115200` to open Minicom and connect to the correct UART port.
+   - Run:
+     ```bash
+     sudo dmesg | grep tty
+     ```
+     find the USB port. Here, the port is ttyUSB0.
+   - Then:
+     ```bash
+     sudo minicom -D /dev/ttyUSB0 -b 115200
+     ```
+      to open Minicom and connect to the correct UART port.
 
 5. **Build Static Ethernet Connection Between PC and FPGA**
 
    - **Temporary Setup**  
-     - Use `ip a` to find the Ethernet interface (e.g., `enp3s0`).
+     - find the Ethernet interface (e.g., `enp3s0`).
+       ```bash
+       ip a
+       ```
      - Run:
        ```bash
        sudo ip addr add 192.168.1.2/24 dev enp3s0
