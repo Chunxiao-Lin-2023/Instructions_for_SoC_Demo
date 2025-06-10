@@ -99,6 +99,7 @@
          ```
       5. Start the ESN and send the testing input file in chunks.
          ```bash
-         data_in_test.txt
+         data_in_test_SNR_0.txt
+         data_in_test_SNR_4.txt
          ```
       7. From the minicom, we can see the testing NMSE.
