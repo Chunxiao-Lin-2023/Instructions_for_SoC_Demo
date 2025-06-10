@@ -13,10 +13,10 @@
      ```bash
      sudo dmesg | grep tty
      ```
-     to find the USB port. Here, the port is ttyUSB0.
+     to find the USB port. Here, the port is ttyUSB2(The front port).
    - Then:
      ```bash
-     sudo minicom -D /dev/ttyUSB0 -b 115200
+     sudo minicom -D /dev/ttyUSB2 -b 115200
      ```
       to open Minicom and connect to the correct UART port.
 
