@@ -37,7 +37,7 @@
        ping 192.168.1.10
        ```
 
-   - **Permanent Setup using Netplan**  
+   - **Permanent Setup using Netplan (connect to the outerside port)**  
      - Find the Netplan configuration file at `/etc/netplan/` with a `.yaml` extension.
      - Edit the Netplan configuration file:
        ```bash
