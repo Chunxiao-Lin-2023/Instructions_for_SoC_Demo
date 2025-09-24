@@ -17,7 +17,9 @@
    - Then:
      ```bash
      sudo minicom -D /dev/ttyUSB2 -b 115200
-     # or
+     ```
+     or
+     ```bash
      sudo rm -f /var/lock/LCK..ttyUSB2 && sudo minicom -D /dev/ttyUSB2 -b 115200
      ```
       to open Minicom and connect to the correct UART port.
